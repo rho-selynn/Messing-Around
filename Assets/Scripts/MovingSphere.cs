@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MovingSphere : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Vector2 playerInput;
+        playerInput.x = Input.GetAxis("Horizontal");
+        playerInput.y = Input.GetAxis("Vertical");
+        transform.localPosition = new Vector3(playerInput.x, 0f, playerInput.y);
+        // setting initial player position
     }
 }
